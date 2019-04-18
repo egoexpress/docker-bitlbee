@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  app:
+    image: mbologna/docker-bitlbee
+    restart: always
+    volumes:
+      - ./files/bitlbee:/usr/local/etc/bitlbee
+      - data:/var/lib/bitlbee
+
+volumes:
+  data:
